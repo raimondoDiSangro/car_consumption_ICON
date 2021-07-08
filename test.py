@@ -1,8 +1,11 @@
 import numpy as np
 import pandas as pd
+import seaborn as sns
 
+df = pd.read_csv('data/auto-mpg.csv')
 
-dataset = pd.read_csv('data/auto-mpg.csv')
+print(df.head())
+print(len(df))
+print(df.describe())
 
-print(dataset.head())
-print(len(dataset))
+#Exploratory data Analysis visualization and analysis
