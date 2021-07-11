@@ -24,7 +24,7 @@ df.drop(labels=['car name'], axis=1, inplace=True)
 # Exploratory data Analysis visualization and analysis
 plt.figure(figsize=(10, 8))
 sns.histplot(df.mpg)
-# plt.show()
+#plt.show()
 
 # Correlation
 # f, ax = plt.subplots(figsize=[14, 8])
@@ -38,7 +38,7 @@ sns.pairplot(df, diag_kind='kde')
 plt.figure(figsize=[14, 6])
 sns.barplot(x=df['model year'] , y=df['mpg'])
 plt.title('Consumption Gallon by Years')
-# plt.show()
+#plt.show()
 
 # print(df.corr('spearman'))
 
@@ -49,7 +49,7 @@ y = df['mpg']
 df.drop('mpg', axis=1, inplace=True)
 print(df.head())
 
-X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.3, random_state=3)
+X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.33, random_state=3)
 model = Pipeline(steps=[('scaler', StandardScaler(),), ('lasso', LassoCV(),)])
 # model = Pipeline('scaler', StandardScaler())
 model.fit(X_train, y_train)
@@ -58,13 +58,13 @@ print(X_test)
 print(prediction)
 
 # cylinders,displacement,horsepower,weight,acceleration,model year,origin
-# input_data = (4,97.0,88.0,2130,14.5,70,3) #27
-# input_data = (8,318.0,140.0,3735,13.2,78,1) #19.4
-# input_data = (4, 79.0, 58.0, 1755, 16.9, 81, 3)  # 39.1
-# input_data=(6,168.0,116.0,2900,12.6,81,3) #25.4
-# input_data=(8,351.0,266.0,2860,6,73,3) #de tomaso pantera 13.1-15.8 / 12.6 complete miss
-# input_data = (8,351.0,142.0,4054,14.3,79,1) #15.5
-input_data = (8,302.0,130.0,4295,14.9,77,1) #15
+# input_data = (4,97.0,88.0,2130,14.5,1970,3) #27
+# input_data = (8,318.0,140.0,3735,13.2,1978,1) #19.4
+# input_data = (4, 79.0, 58.0, 1755, 16.9, 1981, 3)  # 39.1
+input_data=(6,168.0,116.0,2900,12.6,1981,3) #25.4
+# input_data=(8,351.0,266.0,2860,6,1973,3) #de tomaso pantera 13.1-15.8 / 12.6 complete miss
+# input_data = (8,351.0,142.0,4054,14.3,1979,1) #15.5
+# input_data = (8,302.0,130.0,4295,14.9,1977,1) #15
 
 
 
