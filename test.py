@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 
 df = pd.read_csv('data/auto_mpg.csv')
 
+
 pd.set_option('display.max_columns', None)  # show all the columns
 # print(df.describe())
 # print(df.head())
@@ -50,15 +51,23 @@ print(df.head())
 
 X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.3, random_state=3)
 model = Pipeline(steps=[('scaler', StandardScaler(),), ('lasso', LassoCV(),)])
+# model = Pipeline('scaler', StandardScaler())
 model.fit(X_train, y_train)
 prediction = model.predict(X_test)
+print(X_test)
+print(prediction)
 
 # cylinders,displacement,horsepower,weight,acceleration,model year,origin
 # input_data = (4,97.0,88.0,2130,14.5,70,3) #27
-#input_data = (8,318.0,140.0,3735,13.2,78,1) #19.4
-input_data = (4, 79.0, 58.0, 1755, 16.9, 81, 3)  # 39.1
+# input_data = (8,318.0,140.0,3735,13.2,78,1) #19.4
+# input_data = (4, 79.0, 58.0, 1755, 16.9, 81, 3)  # 39.1
 # input_data=(6,168.0,116.0,2900,12.6,81,3) #25.4
-# input_data=(8,351.0,266.0,2860,6,73,3) #de tomaso pantera 13.1-15.8 / 12.6
+# input_data=(8,351.0,266.0,2860,6,73,3) #de tomaso pantera 13.1-15.8 / 12.6 complete miss
+# input_data = (8,351.0,142.0,4054,14.3,79,1) #15.5
+input_data = (8,302.0,130.0,4295,14.9,77,1) #15
+
+
+
 
 
 # change the input data to a numpy array
