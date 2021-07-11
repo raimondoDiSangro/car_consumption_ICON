@@ -7,7 +7,8 @@
 - I dati a disposizione contengono specifiche tecniche di una serie di macchine.
  - Il dataset è stato scaricato dal Repository UCI Machine learning. https://archive.ics.uci.edu/ml/datasets/auto+mpg
 - Contiene le specifiche tecniche di auto dal 1970 al 1982.
-- Considerata l'età dei dati, ho ritenuto opportuno aggiornare il dataset personalmente con dati di vetture moderne.
+- Considerata l'età dei dati, ho ritenuto opportuno aggiornare il dataset personalmente con dati di vetture moderne reperiti dal sito internet
+https://www.automobile-catalog.com
 
 
 ### Contenuto dataset 
@@ -32,5 +33,4 @@
   2. ```xxx.py``` description;
 - la directory ```data``` ospita il dataset utilizzato, in formato ```.csv```;
 
-### DISCLAIMER
-- la struttura del dataset proviene dal sito internet https://www.kaggle.com/adityakadiwal/water-potability con licenza d'uso di tipo **CC0: Public Domain**. Il dataset è da considerarsi utile esclusivamente a fini didattici. I dati in esso contenuti vengono forniti senza alcuna garanzia di affidabilità a proposito della loro accuratezza, adeguatezza e utilità ai fini di una valutazione di sicura potabilità di un'acqua presa in analisi.
+
