@@ -26,11 +26,3 @@ https://www.automobile-catalog.com
 
 ### Requisiti
 - librerie ```numpy```, ```sklearn```, ```pandas```, ```seaborn```
-
-### Struttura
-- il progetto è strutturato in questa maniera, all'interno della directory ```src```:
-  1. ```xxx.py``` description;
-  2. ```xxx.py``` description;
-- la directory ```data``` ospita il dataset utilizzato, in formato ```.csv```;
-
-
